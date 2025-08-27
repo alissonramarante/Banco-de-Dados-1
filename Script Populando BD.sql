@@ -41,8 +41,7 @@ INSERT INTO CATEGORIA (CODIGO, NOME) VALUES (39, 'Energia Solar e Sustentabilida
 INSERT INTO CATEGORIA (CODIGO, NOME) VALUES (40, 'Suplementos e Vitaminas');
 
 -- Categoria 1: Eletrônicos
-INSERT INTO PRODUTO (CODIGO, NOME, PRECO, DATA_FABRICACAO, DESCRICAO, ESPECIFICACAO, DATA_VALIDADE, CODIGO_CATEGORIA) VALUES 
-(1, 'Smartphone Galaxy S22', 3899.90, DATE '2023-03-10', 'Smartphone Android topo de linha', 'Tela 6.2", 128GB, 8GB RAM, Câmera 50MP', DATE '2027-03-10', 1);
+INSERT INTO PRODUTO VALUES (1, 'Smartphone Galaxy S22', 3899.90, DATE '2023-03-10', 'Smartphone Android topo de linha', 'Tela 6.2", 128GB, 8GB RAM, Câmera 50MP', DATE '2027-03-10', 1);
 INSERT INTO PRODUTO VALUES (2, 'iPhone 14', 5299.90, DATE '2023-09-20', 'Smartphone Apple com iOS', 'Tela 6.1", 128GB, Chip A15 Bionic', DATE '2027-09-20', 1);
 INSERT INTO PRODUTO VALUES (3, 'Smart TV Samsung 55"', 2799.00, DATE '2023-01-05', 'Smart TV UHD 4K', '55 polegadas, HDR, Wi-Fi, Tizen OS', DATE '2028-01-05', 1);
 INSERT INTO PRODUTO VALUES (4, 'Smart TV LG 65"', 3899.00, DATE '2023-02-14', 'Smart TV LG 4K UHD', '65 polegadas, WebOS, HDR10', DATE '2028-02-14', 1);
@@ -72,6 +71,7 @@ INSERT INTO PRODUTO VALUES (27, 'Caixa de Som Echo Studio', 1799.00, DATE '2023-
 INSERT INTO PRODUTO VALUES (28, 'Headset Gamer HyperX Cloud II', 699.00, DATE '2023-05-15', 'Headset gamer com som surround', 'Drivers 53mm, microfone removível, USB', DATE '2027-05-15', 1);
 INSERT INTO PRODUTO VALUES (29, 'Controle Xbox Series', 449.00, DATE '2023-04-01', 'Controle sem fio Microsoft', 'Bluetooth, vibração, entrada P2', DATE '2028-04-01', 1);
 INSERT INTO PRODUTO VALUES (30, 'Controle DualSense PS5', 499.00, DATE '2023-04-01', 'Controle sem fio Sony', 'Feedback tátil, gatilhos adaptáveis', DATE '2028-04-01', 1);
+
 -- Categoria 2: Computadores e Informática
 INSERT INTO PRODUTO VALUES (31, 'Notebook Lenovo IdeaPad 3', 2899.00, DATE '2023-03-10', 'Notebook intermediário para estudos e trabalho', 'Intel i5, 8GB RAM, 256GB SSD, Windows 11', DATE '2028-03-10', 2);
 INSERT INTO PRODUTO VALUES (32, 'Notebook Asus VivoBook', 3499.00, DATE '2023-05-20', 'Notebook leve e rápido', 'Intel i7, 16GB RAM, 512GB SSD, Windows 11', DATE '2028-05-20', 2);
@@ -103,6 +103,7 @@ INSERT INTO PRODUTO VALUES (57, 'Gabinete Corsair iCUE 5000X', 1199.00, DATE '20
 INSERT INTO PRODUTO VALUES (58, 'Fonte Corsair RM750x', 799.00, DATE '2023-03-01', 'Fonte modular confiável', '750W, 80 Plus Gold, PFC ativo', DATE '2029-03-01', 2);
 INSERT INTO PRODUTO VALUES (59, 'Fonte EVGA 850W GQ', 899.00, DATE '2023-04-01', 'Fonte gamer de alto desempenho', '850W, 80 Plus Gold, modular', DATE '2029-04-01', 2);
 INSERT INTO PRODUTO VALUES (60, 'Cadeira Gamer ThunderX3', 1299.00, DATE '2023-06-20', 'Cadeira ergonômica gamer', 'Reclinável, apoio de braço 3D, revestimento PU', DATE '2029-06-20', 2);
+
 -- Categoria 3: Celulares e Acessórios
 INSERT INTO PRODUTO VALUES (61, 'Smartphone Samsung Galaxy A54', 1899.90, DATE '2023-08-15', 'Smartphone intermediário com ótimas câmeras', 'Tela 6.4", 128GB, 6GB RAM, Câmera 50MP', DATE '2027-08-15', 3);
 INSERT INTO PRODUTO VALUES (62, 'Smartphone Motorola Moto G84', 1499.00, DATE '2023-09-10', 'Smartphone com bateria de longa duração', 'Tela 6.5", 256GB, 12GB RAM, 5000mAh', DATE '2027-09-10', 3);
@@ -134,6 +135,7 @@ INSERT INTO PRODUTO VALUES (87, 'Anel de Segurança com Suporte', 39.90, DATE '2
 INSERT INTO PRODUTO VALUES (88, 'Lente Telefoto Externa 12x', 199.00, DATE '2023-12-01', 'Lente para fotografia profissional', 'Aumento 12x, clip universal, kit 3 lentes', DATE '2026-12-01', 3);
 INSERT INTO PRODUTO VALUES (89, 'Microfone para Smartphone', 179.00, DATE '2023-12-15', 'Microfone externo para gravação', 'Cancelamento de ruído, compatível Lightning/USB-C', DATE '2026-12-15', 3);
 INSERT INTO PRODUTO VALUES (90, 'Estação de Carregamento 3 em 1', 399.00, DATE '2023-12-20', 'Carregador sem fio para múltiplos dispositivos', 'Apple Watch, AirPods, iPhone, 15W fast charging', DATE '2026-12-20', 3);
+
 -- Categoria 4: TV, Áudio e Home Theater
 INSERT INTO PRODUTO VALUES (91, 'Smart TV Samsung 65" QLED 4K', 4299.00, DATE '2023-09-01', 'TV QLED com cores vibrantes e alto brilho', '65 polegadas, Quantum HDR, Processador Quantum 4K, Alexa Built-in', DATE '2028-09-01', 4);
 INSERT INTO PRODUTO VALUES (92, 'Smart TV LG 55" OLED 4K', 3799.00, DATE '2023-08-15', 'TV OLED com pretos profundos e cores precisas', '55 polegadas, Dolby Vision IQ, Processador α9, WebOS', DATE '2028-08-15', 4);
@@ -165,6 +167,7 @@ INSERT INTO PRODUTO VALUES (117, 'Cabos HDMI 2.1 Ultra High Speed', 129.00, DATE
 INSERT INTO PRODUTO VALUES (118, 'Kit Cabos Ópticos Toslink', 89.90, DATE '2023-03-22', 'Cabos de áudio digital óptico', '5.1 surround sound, 24-bit/192kHz, 1.5m', DATE '2027-03-22', 4);
 INSERT INTO PRODUTO VALUES (119, 'Controlador DJ Pioneer DDJ-400', 1999.00, DATE '2023-08-25', 'Controlador para Rekordbox com software', '2 decks, jog wheels, performance pads, FX controls', DATE '2027-08-25', 4);
 INSERT INTO PRODUTO VALUES (120, 'Monitor de Áudio Yamaha HS5', 1299.00, DATE '2023-07-30', 'Monitor de estúdio de 5 polegadas', '70W bi-amplified, resposta 54-30.000Hz, XLR/TRS', DATE '2027-07-30', 4);
+
 -- Categoria 5: Livros
 INSERT INTO PRODUTO VALUES (121, 'O Hobbit - J.R.R. Tolkien', 39.90, DATE '2023-01-15', 'Clássico da fantasia que precede Senhor dos Anéis', 'Edição especial capa dura, 336 páginas, editora HarperCollins', DATE '2033-01-15', 5);
 INSERT INTO PRODUTO VALUES (122, '1984 - George Orwell', 29.90, DATE '2023-02-10', 'Distopia clássica sobre vigilância e controle totalitário', 'Edição brochura, 352 páginas, editora Companhia das Letras', DATE '2033-02-10', 5);
@@ -196,6 +199,7 @@ INSERT INTO PRODUTO VALUES (147, 'O Iluminado - Stephen King', 52.90, DATE '2023
 INSERT INTO PRODUTO VALUES (148, 'A Paciente Silenciosa - Alex Michaelides', 39.90, DATE '2023-09-15', 'Thriller psicológico com final surpreendente', 'Best-seller, 352 páginas, editora Record', DATE '2033-09-15', 5);
 INSERT INTO PRODUTO VALUES (149, 'O Homem de Giz - C.J. Tudor', 37.90, DATE '2023-10-05', 'Thriller sobrenatural com mistério do passado', '336 páginas, sucesso internacional, editora Intrínseca', DATE '2033-10-05', 5);
 INSERT INTO PRODUTO VALUES (150, 'A Vida Invisível de Addie LaRue - V.E. Schwab', 54.90, DATE '2023-10-20', 'Fantasia sobre imortalidade e legado', '480 páginas, capa dura, editora Galera', DATE '2033-10-20', 5);
+
 -- Categoria 6: Kindle e eBooks
 INSERT INTO PRODUTO VALUES (151, 'Kindle Paperwhite 11ª Geração 16GB', 699.00, DATE '2023-09-01', 'Leitor eBooks com tela de 6.8" e iluminação ajustável', 'Resistente à água, 16GB, bateria de semanas, Wi-Fi', DATE '2028-09-01', 6);
 INSERT INTO PRODUTO VALUES (152, 'Kindle Oasis 32GB', 1299.00, DATE '2023-08-15', 'Kindle premium com tela de 7" e design ergonômico', 'Iluminação quente, botões de página, 32GB, Wi-Fi', DATE '2028-08-15', 6);
@@ -259,6 +263,7 @@ INSERT INTO PRODUTO VALUES (207, 'Tábua de Carne em Polietileno', 49.90, DATE '
 INSERT INTO PRODUTO VALUES (208, 'Jogo de Espátulas e Colheres de Silicone', 39.90, DATE '2023-09-15', 'Conjunto 5 peças em silicone resistente ao calor', 'Até 230°C, cores variadas, cabos ergonômicos', DATE '2028-09-15', 7);
 INSERT INTO PRODUTO VALUES (209, 'Porta Temperos Magnético', 79.90, DATE '2023-08-25', 'Organizador de temperos com imã', '6 potes, capacidade 150ml cada, fácil identificação', DATE '2028-08-25', 7);
 INSERT INTO PRODUTO VALUES (210, 'Escorredor de Louça Inox', 129.90, DATE '2023-07-30', 'Escorredor com bandeja e utensíleiros', 'Aço inox, capacidade ampla, design moderno', DATE '2028-07-30', 7);
+
 -- Categoria 8: Móveis e Decoração
 INSERT INTO PRODUTO VALUES (211, 'Sofá 3 Lugares Retrátil e Reclinável', 1899.90, DATE '2023-09-01', 'Sofá confortável com assentos retráteis e reclináveis', 'Tecido suede, 3 lugares, mecanismo retrátil, apoio de braço', DATE '2028-09-01', 8);
 INSERT INTO PRODUTO VALUES (212, 'Mesa de Jantar com 6 Cadeiras', 1299.00, DATE '2023-08-15', 'Conjunto completo para sala de jantar', 'Mesa 1.40m, madeira MDF, 6 cadeiras estofadas', DATE '2028-08-15', 8);
@@ -290,6 +295,7 @@ INSERT INTO PRODUTO VALUES (237, 'Cesta Organizadora de Vime', 79.90, DATE '2023
 INSERT INTO PRODUTO VALUES (238, 'Suporte para Plantas Macramê', 59.90, DATE '2023-09-15', 'Suporte pendurado para vasos de plantas', 'Cordão de algodão, 1.5m, capacidade 5kg', DATE '2028-09-15', 8);
 INSERT INTO PRODUTO VALUES (239, 'Divisor de Ambientes Biombos', 399.00, DATE '2023-08-25', 'Biombo decorativo 4 painéis', '180x40cm cada painel, estrutura madeira, tecido', DATE '2028-08-25', 8);
 INSERT INTO PRODUTO VALUES (240, 'Aparador de Sala MDF 3 Portas', 599.00, DATE '2023-07-30', 'Aparador para sala de jantar ou hall', '120x40x85cm, 3 portas, 2 gavetas, MDF', DATE '2028-07-30', 8);
+
 -- Categoria 9: Moda Masculina
 INSERT INTO PRODUTO VALUES (241, 'Camisa Social Manga Longa Slim', 129.90, DATE '2023-09-01', 'Camisa social algodão para trabalho', '100% algodão, gola inglesa, slim fit, várias cores', DATE '2026-09-01', 9);
 INSERT INTO PRODUTO VALUES (242, 'Calça Jeans Masculina Slim', 159.90, DATE '2023-08-15', 'Calça jeans moderna corte slim', 'Denim elastano, 5 bolsos, cós com elástico', DATE '2026-08-15', 9);
@@ -321,6 +327,7 @@ INSERT INTO PRODUTO VALUES (267, 'Carteira Masculina Couro', 119.90, DATE '2023-
 INSERT INTO PRODUTO VALUES (268, 'Smoking Completo Masculino', 1299.00, DATE '2023-09-15', 'Smoking para eventos formais', 'Paletó e calça, tecido premium, acessórios inclusos', DATE '2026-09-15', 9);
 INSERT INTO PRODUTO VALUES (269, 'Mochila Executiva Couro', 299.90, DATE '2023-08-25', 'Mochila profissional para trabalho', 'Couro sintético, compartimento notebook, organizadores', DATE '2026-08-25', 9);
 INSERT INTO PRODUTO VALUES (270, 'Óculos de Sol Polarizado', 199.90, DATE '2023-07-30', 'Óculos solar com proteção UV', 'Lentes polarizadas, armação acetato, vários modelos', DATE '2026-07-30', 9);
+
 -- Categoria 10: Moda Feminina
 INSERT INTO PRODUTO VALUES (271, 'Vestido Midi Floral Verão', 159.90, DATE '2023-09-01', 'Vestido leve e feminino com estampa floral', 'Tecido viscose, alças finas, corte evasê, forrado', DATE '2026-09-01', 10);
 INSERT INTO PRODUTO VALUES (272, 'Blusa Feminina em Seda Natural', 199.90, DATE '2023-08-15', 'Blusa luxuosa em seda pura', '100% seda, gola V, corte franzido, várias cores', DATE '2026-08-15', 10);
@@ -353,6 +360,101 @@ INSERT INTO PRODUTO VALUES (298, 'Óculos de Sol Feminino Cat Eye', 159.90, DATE
 INSERT INTO PRODUTO VALUES (299, 'Carteira Feminina Compacta', 139.90, DATE '2023-08-25', 'Carteira com múltiplos cartões', 'Couro sintético, fechamento botão, RFID protection', DATE '2026-08-25', 10);
 INSERT INTO PRODUTO VALUES (300, 'Anéis Pack 5 Peças Prata', 89.90, DATE '2023-07-30', 'Kit anéis minimalistas prata 925', 'Prata sterling, vários designs, tamanho ajustável', DATE '2026-07-30', 10);
 
+-- Categoria 11: Esporte e Lazer
+INSERT INTO PRODUTO VALUES (301, 'Bola de Futebol Society Nike', 129.90, DATE '2023-09-01', 'Bola oficial para futebol society', 'Material PU, câmara de butila, peso oficial 410g', DATE '2026-09-01', 11);
+INSERT INTO PRODUTO VALUES (302, 'Tênis de Corrida Nike Air Zoom', 599.90, DATE '2023-08-15', 'Tênis performance para corrida de rua', 'Amortecimento Zoom Air, cabedal respirável, solado rubber', DATE '2026-08-15', 11);
+INSERT INTO PRODUTO VALUES (303, 'Luva de Goleiro Penalty', 89.90, DATE '2023-07-20', 'Luva profissional para goleiros', 'Palma de latex, fechamento velcro, dedo reto', DATE '2026-07-20', 11);
+INSERT INTO PRODUTO VALUES (304, 'Raquete de Tênis Wilson', 399.00, DATE '2023-06-10', 'Raquete profissional para tênis', 'Quadro grafite, 300g, encordoamento incluído', DATE '2026-06-10', 11);
+INSERT INTO PRODUTO VALUES (305, 'Bicicleta Mountain Bike 21 Marchas', 899.90, DATE '2023-05-05', 'Bike para trilhas e estradas', 'Aro 29, freio a disco, suspensão dianteira, 21 velocidades', DATE '2027-05-05', 11);
+INSERT INTO PRODUTO VALUES (306, 'Kit de Pesca Completo', 259.90, DATE '2023-04-01', 'Kit iniciante para pesca esportiva', 'Vara carretilha, anzóis, linhas, caixa organizadora', DATE '2026-04-01', 11);
+INSERT INTO PRODUTO VALUES (307, 'Tabela de Basquete Ajustável', 499.90, DATE '2023-03-15', 'Tabela regulável para quadra', 'Altura 2.10m-3.05m, aro profissional, placa acrílica', DATE '2027-03-15', 11);
+INSERT INTO PRODUTO VALUES (308, 'Rede de Vôlei Oficial', 199.90, DATE '2023-02-20', 'Rede oficial para vôlei de praia e quadra', 'Altura 2.43m, comprimento 9.5m, material nylon', DATE '2026-02-20', 11);
+INSERT INTO PRODUTO VALUES (309, 'Par de Patins Inline Oxer', 349.90, DATE '2023-01-10', 'Patins para adultos iniciantes', 'Rodas 80mm, freio traseiro, bota confortável', DATE '2026-01-10', 11);
+INSERT INTO PRODUTO VALUES (310, 'Tabuleiro de Xadrez Oficial', 79.90, DATE '2023-09-10', 'Jogo de xadrez torneio', 'Peças staunton, tabuleiro vinil, 40x40cm', DATE '2028-09-10', 11);
+INSERT INTO PRODUTO VALUES (311, 'Bola de Basquete Spalding NBA', 159.90, DATE '2023-08-01', 'Bola oficial da NBA', 'Tamanho 7, material composite, grip superior', DATE '2026-08-01', 11);
+INSERT INTO PRODUTO VALUES (312, 'Taco de Beisebol Profissional', 129.90, DATE '2023-07-15', 'Taco de alumínio para beisebol', 'Alumínio aeronáutico, peso balanceado, várias medidas', DATE '2026-07-15', 11);
+INSERT INTO PRODUTO VALUES (313, 'Skate Completo Infantil', 189.90, DATE '2023-06-20', 'Skate ready to ride para crianças', 'Shape 7.5", trucks aluminio, rodas 52mm, ABEC 5', DATE '2026-06-20', 11);
+INSERT INTO PRODUTO VALUES (314, 'Equipamento de Mergulho Snorkel', 149.90, DATE '2023-05-25', 'Kit máscara e snorkel profissional', 'Máscara silicone, snorkel dry top, válvula purga', DATE '2026-05-25', 11);
+INSERT INTO PRODUTO VALUES (315, 'Bola de Vôlei Mikasa Oficial', 179.90, DATE '2023-04-30', 'Bola oficial de vôlei de quadra', 'Painéis micropore, interior latex, peso 260-280g', DATE '2026-04-30', 11);
+INSERT INTO PRODUTO VALUES (316, 'Trampolim Circular 3m', 899.00, DATE '2023-03-12', 'Trampolim garden com rede de proteção', 'Diâmetro 3m, capacidade 150kg, molas galvanizadas', DATE '2027-03-12', 11);
+INSERT INTO PRODUTO VALUES (317, 'Luvas de Muay Thai Venum', 199.90, DATE '2023-02-18', 'Luvas profissionais para artes marciais', 'Couro sintético, 12oz, preenchimento foam', DATE '2026-02-18', 11);
+INSERT INTO PRODUTO VALUES (318, 'Bola de Futebol Americano', 99.90, DATE '2023-01-22', 'Bola oficial NFL tamanho adulto', 'Couro sintético, grip enhanced, tamanho oficial', DATE '2026-01-22', 11);
+INSERT INTO PRODUTO VALUES (319, 'Taco de Golf Driver', 459.90, DATE '2023-09-05', 'Taco driver para iniciantes', 'Graphite shaft, 10.5° loft, headcover incluído', DATE '2026-09-05', 11);
+INSERT INTO PRODUTO VALUES (320, 'Prancha de Stand Up Paddle', 1299.00, DATE '2023-08-12', 'SUP inflável para iniciantes', '3m comprimento, 800L capacidade, kit completo', DATE '2027-08-12', 11);
+INSERT INTO PRODUTO VALUES (321, 'Bola de Rugby Gilbert', 189.90, DATE '2023-07-18', 'Bola oficial para rugby union', 'Tamanho 5, grip 4D, resistente à água', DATE '2026-07-18', 11);
+INSERT INTO PRODUTO VALUES (322, 'Kit Badminton Completo', 129.90, DATE '2023-06-24', 'Kit com 2 raquetes e petecas', 'Raquetes alumínio, petecas nylon, rede opcional', DATE '2026-06-24', 11);
+INSERT INTO PRODUTO VALUES (323, 'Mesa de Ping Pong Oficial', 799.00, DATE '2023-05-30', 'Mesa oficial para tênis de mesa', 'Dobra fácil, 5mm topo, rodízios, rede incluída', DATE '2027-05-30', 11);
+INSERT INTO PRODUTO VALUES (324, 'Bola de Futebol de Areia', 69.90, DATE '2023-04-05', 'Bola específica para futevôlei', 'Material resistente à areia, peso leve, cores vibrantes', DATE '2026-04-05', 11);
+INSERT INTO PRODUTO VALUES (325, 'Taco de Hockey sobre Grama', 159.90, DATE '2023-03-10', 'Taco profissional para hockey', 'Fibra de vidro, peso balanceado, várias medidas', DATE '2026-03-10', 11);
+INSERT INTO PRODUTO VALUES (326, 'Rede de Futebol Society', 299.90, DATE '2023-02-15', 'Rede oficial para gol de futebol', '5x2m, nylon resistente, malha 10cm', DATE '2026-02-15', 11);
+INSERT INTO PRODUTO VALUES (327, 'Bola de Handebol Seleção', 139.90, DATE '2023-01-20', 'Bola oficial de handebol', 'Tamanho 3, superfície grip, resistente a impactos', DATE '2026-01-20', 11);
+INSERT INTO PRODUTO VALUES (328, 'Kit Camping 4 Pessoas', 599.90, DATE '2023-09-15', 'Barraca + sacos de dormir + lanternas', 'Barraca 4 pessoas, sacos -5°C, kit sobrevivência', DATE '2027-09-15', 11);
+INSERT INTO PRODUTO VALUES (329, 'Taco de Criquete English Willow', 899.90, DATE '2023-08-25', 'Taco profissional de criquete', 'Madeira salix alba, peso 2.10lb, grip premium', DATE '2026-08-25', 11);
+INSERT INTO PRODUTO VALUES (330, 'Bola de Polo Aquático', 119.90, DATE '2023-07-30', 'Bola oficial para polo aquático', 'Material impermeável, grip molhado, cores contrastantes', DATE '2026-07-30', 11);
+
+-- Categoria 12: Beleza e Cuidados Pessoais
+INSERT INTO PRODUTO VALUES (331, 'Secador de Cabelo Profissional 2000W', 199.90, DATE '2023-09-01', 'Secador potente com tecnologia iônica', '2000W, 2 velocidades, 3 temperaturas, concentrador', DATE '2026-09-01', 12);
+INSERT INTO PRODUTO VALUES (332, 'Chapinha Cerâmica Professional 1"', 159.90, DATE '2023-08-15', 'Chapinha alisadora com placas cerâmicas', 'Temperatura até 230°C, placas flutuantes, digital display', DATE '2026-08-15', 12);
+INSERT INTO PRODUTO VALUES (333, 'Kit Maquiagem Profissional 120 Cores', 299.90, DATE '2023-07-20', 'Kit completo com paletas e pincéis', 'Sombra, blush, iluminador, 12 pincéis profissionais', DATE '2025-07-20', 12);
+INSERT INTO PRODUTO VALUES (334, 'Creme Facial Hidratante com Ácido Hialurônico', 89.90, DATE '2023-06-10', 'Hidratante anti-idade e rejuvenescimento', '50ml, textura leve, não comedogênico, livre de óleo', DATE '2025-06-10', 12);
+INSERT INTO PRODUTO VALUES (335, 'Perfume Importado Eau de Parfum 100ml', 279.90, DATE '2023-05-05', 'Fragrância premium de longa duração', 'Notas amadeiradas, família olfativa oriental, fixação 12h', DATE '2026-05-05', 12);
+INSERT INTO PRODUTO VALUES (336, 'Escova Rotativa com Ions', 249.90, DATE '2023-04-01', 'Escova modeladora com tecnologia iônica', '3 attachments, 2 velocidades, cabo giratório 360°', DATE '2026-04-01', 12);
+INSERT INTO PRODUTO VALUES (337, 'Serum Facial Vitamina C 30ml', 119.90, DATE '2023-03-15', 'Sérum antioxidade e clareador', '20% vitamina C, ácido ferúlico, textura leve', DATE '2025-03-15', 12);
+INSERT INTO PRODUTO VALUES (338, 'Kit Barber Profissional 8 Peças', 189.90, DATE '2023-02-20', 'Kit completo para barbearia', 'Máquina cortar cabelo, tesouras, navalha, pentes', DATE '2026-02-20', 12);
+INSERT INTO PRODUTO VALUES (339, 'Protetor Solar FPS 70 200ml', 69.90, DATE '2023-01-10', 'Protetor solar toque seco', 'Proteção UVA/UVB, resistente à água, não oleoso', DATE '2025-01-10', 12);
+INSERT INTO PRODUTO VALUES (340, 'Máquina de Cortar Cabelo Wahl', 299.90, DATE '2023-09-10', 'Máquina profissional para cortes precisos', 'Cabo ergonômico, 12 pentes guia, motor potente', DATE '2026-09-10', 12);
+INSERT INTO PRODUTO VALUES (341, 'Batom Líquido Matte 12h', 49.90, DATE '2023-08-01', 'Batom de longa duração não ressecante', '12 cores disponíveis, fórmula vegana, não transfere', DATE '2025-08-01', 12);
+INSERT INTO PRODUTO VALUES (342, 'Kit Tratamento Capilar Reconstrutor', 139.90, DATE '2023-07-15', 'Kit com shampoo, condicionador e máscara', 'Com queratina, arginina, proteção térmica', DATE '2025-07-15', 12);
+INSERT INTO PRODUTO VALUES (343, 'Depilador a Laser IPL', 899.90, DATE '2023-06-20', 'Depilação permanente caseira', '5 níveis de intensidade, 300.000 flashes, sensor de pele', DATE '2026-06-20', 12);
+INSERT INTO PRODUTO VALUES (344, 'Creme para Assaduras Bepantol', 29.90, DATE '2023-05-25', 'Creme preventivo para assaduras', '50g, dermatologicamente testado, sem perfume', DATE '2025-05-25', 12);
+INSERT INTO PRODUTO VALUES (345, 'Perfume Colônia Infantil 200ml', 39.90, DATE '2023-04-30', 'Fragrância suave para crianças', 'Hipoalergênico, pH neutro, embalagem divertida', DATE '2025-04-30', 12);
+INSERT INTO PRODUTO VALUES (346, 'Escova de Dentes Elétrica Oral-B', 259.90, DATE '2023-03-12', 'Escova elétrica com tecnologia oscilante', '3 modos de escovação, timer 2min, sensor de pressão', DATE '2026-03-12', 12);
+INSERT INTO PRODUTO VALUES (347, 'Base Líquida Alta Cobertura', 79.90, DATE '2023-02-18', 'Base matte de longa duração', '30ml, 16 tons disponíveis, não obstrui poros', DATE '2025-02-18', 12);
+INSERT INTO PRODUTO VALUES (348, 'Aparelho de Limpeza Facial a Vapor', 159.90, DATE '2023-01-22', 'Vaporizador facial profissional', 'Tanque 100ml, temperatura ajustável, kit extrações', DATE '2026-01-22', 12);
+INSERT INTO PRODUTO VALUES (349, 'Hidratante Corporal 500ml', 59.90, DATE '2023-09-05', 'Hidratante corporal com manteiga de karité', 'Textura não gordurosa, absorção rápida, fragrância suave', DATE '2025-09-05', 12);
+INSERT INTO PRODUTO VALUES (350, 'Tinta para Cabelo Garnier Nutrisse', 19.90, DATE '2023-08-12', 'Tinta permanente com frutose', 'Cobre até 100% dos fios brancos, 12 cores', DATE '2025-08-12', 12);
+INSERT INTO PRODUTO VALUES (351, 'Máscara de Cílios Volume Impactante', 45.90, DATE '2023-07-18', 'Máscara para cílios com efeito dramático', 'Escova curva, fórmula à prova d''água, não borra', DATE '2025-07-18', 12);
+INSERT INTO PRODUTO VALUES (352, 'Aparelho para Alongar Cílios', 89.90, DATE '2023-06-24', 'Kit completo para extensão de cílios', 'Pinças profissionais, adesivo, fios de seda', DATE '2025-06-24', 12);
+INSERT INTO PRODUTO VALUES (353, 'Desodorante Roll On 48h', 22.90, DATE '2023-05-30', 'Desodorante antitranspirante eficaz', '48h proteção, sem álcool, fragrância suave', DATE '2025-05-30', 12);
+INSERT INTO PRODUTO VALUES (354, 'Kit Unhas em Gel UV', 199.90, DATE '2023-04-05', 'Kit completo para unhas de gel', 'Luz UV 48W, bases, tops, removedor, formas', DATE '2025-04-05', 12);
+INSERT INTO PRODUTO VALUES (355, 'Creme para Celulite Massageador', 79.90, DATE '2023-03-10', 'Creme redutor de medidas', 'Com cafeína, rolo massageador, 200ml', DATE '2025-03-10', 12);
+INSERT INTO PRODUTO VALUES (356, 'Shampoo Seco 150ml', 39.90, DATE '2023-02-15', 'Shampoo a seco para refrescar fios', 'Sem enxágue, absorve oleosidade, volume instantâneo', DATE '2025-02-15', 12);
+INSERT INTO PRODUTO VALUES (357, 'Kit Barber Premium Presente', 399.90, DATE '2023-01-20', 'Kit presente para cuidados masculinos', 'Produtos barba, cremes, acessórios premium', DATE '2026-01-20', 12);
+INSERT INTO PRODUTO VALUES (358, 'Balança Digital de Banheiro', 89.90, DATE '2023-09-15', 'Balança com tecnologia bioimpedância', 'Peso, gordura, músculo, água, IMC, Bluetooth', DATE '2026-09-15', 12);
+INSERT INTO PRODUTO VALUES (359, 'Lixa Elétrica para Pés', 69.90, DATE '2023-08-25', 'Aparelho removedor de calosidades', '3 cabeças diferentes, rotação suave, LED', DATE '2026-08-25', 12);
+INSERT INTO PRODUTO VALUES (360, 'Diffuser para Óleos Essenciais', 129.90, DATE '2023-07-30', 'Aromatizador ultrassônico com LED', '300ml, 7 cores LED, timer 4h, desligamento automático', DATE '2026-07-30', 12);
+
+-- Categoria 14: Brinquedos e Jogos
+INSERT INTO PRODUTO VALUES (391, 'Lego Star Wars Millennium Falcon', 899.90, DATE '2023-09-01', 'Kit de construção com 1354 peças', '7 mini-figuras, escala 1:100, idade 14+, colecionável', DATE '2028-09-01', 14);
+INSERT INTO PRODUTO VALUES (392, 'Boneca Barbie Dreamhouse', 699.90, DATE '2023-08-15', 'Casa de bonecas com 3 andares', '75+ acessórios, elevador, piscina, luzes e sons', DATE '2028-08-15', 14);
+INSERT INTO PRODUTO VALUES (393, 'Carrinho Hot Wheels Pista Loop', 129.90, DATE '2023-07-20', 'Pista com loop duplo e lançador', '2 carros inclusos, montagem fácil, 4+ anos', DATE '2027-07-20', 14);
+INSERT INTO PRODUTO VALUES (394, 'PlayStation 5 Console Digital Edition', 3899.90, DATE '2023-06-10', 'Console de videogame última geração', '825GB SSD, 4K, Ray Tracing, controle DualSense', DATE '2028-06-10', 14);
+INSERT INTO PRODUTO VALUES (395, 'Xbox Series S 512GB', 2299.90, DATE '2023-05-05', 'Console digital compacto', '512GB SSD, 1440p, 120fps, Game Pass', DATE '2028-05-05', 14);
+INSERT INTO PRODUTO VALUES (396, 'Nintendo Switch OLED 64GB', 2199.90, DATE '2023-04-01', 'Console híbrido portátil/console', 'Tela OLED 7", 64GB, Joy-Cons, Dock 4K', DATE '2028-04-01', 14);
+INSERT INTO PRODUTO VALUES (397, 'Kit Massinha Play-Doh 10 Cores', 49.90, DATE '2023-03-15', 'Massinha de modelar não tóxica', '10 potes 56g, acessórios, idade 2+', DATE '2026-03-15', 14);
+INSERT INTO PRODUTO VALUES (398, 'Quebra-Cabeça 1000 Peças Panorâmico', 89.90, DATE '2023-02-20', 'Quebra-cabeça desafiador para adultos', 'Cena natureza, peças resistentes, 68x48cm montado', DATE '2028-02-20', 14);
+INSERT INTO PRODUTO VALUES (399, 'Bicicleta Infantil Aro 12 com Rodinhas', 299.90, DATE '2023-01-10', 'Bike infantil com segurança', 'Rodinhas removíveis, freio contra-pedal, idade 3-5', DATE '2027-01-10', 14);
+INSERT INTO PRODUTO VALUES (400, 'Pelúcia Ursinho Gigante 1.5m', 199.90, DATE '2023-09-10', 'Uso de pelúcia gigante fofinho', '150cm, material hipoalergênico, lavável', DATE '2028-09-10', 14);
+INSERT INTO PRODUTO VALUES (401, 'Kit Ciência Young Scientist', 79.90, DATE '2023-08-01', 'Kit educativo experiências científicas', '50 experimentos, manual ilustrado, idade 8+', DATE '2026-08-01', 14);
+INSERT INTO PRODUTO VALUES (402, 'Tabuleiro War Estratégia', 129.90, DATE '2023-07-15', 'Jogo clássico de estratégia militar', '2-6 jogadores, 90min duração, mapa mundial', DATE '2028-07-15', 14);
+INSERT INTO PRODUTO VALUES (403, 'Boneco Action Figure Homem-Aranha', 159.90, DATE '2023-06-20', 'Boneco articulado com acessórios', '30 pontos articulação, traje clássico, base display', DATE '2027-06-20', 14);
+INSERT INTO PRODUTO VALUES (404, 'Piscina de Bolinhas 200 Bolas', 149.90, DATE '2023-05-25', 'Piscina inflável com bolinhas coloridas', '150x150cm, bolas inclusas, idade 1-4', DATE '2026-05-25', 14);
+INSERT INTO PRODUTO VALUES (405, 'Kit Maker 3D Pen para Crianças', 199.90, DATE '2023-04-30', 'Caneta 3D segura para crianças', 'Temperatura baixa, filamento PLA, moldes inclusos', DATE '2026-04-30', 14);
+INSERT INTO PRODUTO VALUES (406, 'Jogo Uno Cards Original', 29.90, DATE '2023-03-12', 'Jogo de cartas clássico família', '2-10 jogadores, 108 cartas, idade 7+', DATE '2028-03-12', 14);
+INSERT INTO PRODUTO VALUES (407, 'Carrinho de Controle Remoto Lamborghini', 189.90, DATE '2023-02-18', 'Carrinho RC escala 1:14', 'Controle 2.4GHz, 20km/h, bateria recarregável', DATE '2027-02-18', 14);
+INSERT INTO PRODUTO VALUES (408, 'Brinquedo Educativo Alfabeto Magnético', 69.90, DATE '2023-01-22', 'Letras magnéticas para geladeira', '26 letras, números, cores vibrantes, idade 3+', DATE '2028-01-22', 14);
+INSERT INTO PRODUTO VALUES (409, 'Kit Magic: The Gathering Booster Box', 599.90, DATE '2023-09-05', 'Caixa com 36 pacotes de cartas', 'Edição mais recente, cartas raras, colecionável', DATE '2028-09-05', 14);
+INSERT INTO PRODUTO VALUES (410, 'Drone com Câmera HD 1080p', 349.90, DATE '2023-08-12', 'Drone infantil com câmera', 'Gravação 1080p, controle remoto, altitude hold', DATE '2027-08-12', 14);
+INSERT INTO PRODUTO VALUES (411, 'Boneca Baby Alive Come Come', 159.90, DATE '2023-07-18', 'Boneca realista que come e faz xixi', 'Acessórios alimentação, fraldas, idade 3+', DATE '2027-07-18', 14);
+INSERT INTO PRODUTO VALUES (412, 'Kit Construção Ponte Leonardo da Vinci', 119.90, DATE '2023-06-24', 'Kit educativo de construção em madeira', 'Sem cola, design histórico, idade 14+', DATE '2028-06-24', 14);
+INSERT INTO PRODUTO VALUES (413, 'Jogo Banco Imobiliário Edição Especial', 199.90, DATE '2023-05-30', 'Clássico jogo de negócios imobiliários', 'Tabuleiro premium, 2-8 jogadores, 180min', DATE '2028-05-30', 14);
+INSERT INTO PRODUTO VALUES (414, 'Patins Infantil 4 Rodas Ajustável', 229.90, DATE '2023-04-05', 'Patins ajustável número 28-31', 'Proteções inclusas, rodas PU, freio traseiro', DATE '2027-04-05', 14);
+INSERT INTO PRODUTO VALUES (415, 'Quebra-Cabeça 3D Empire State Building', 139.90, DATE '2023-03-10', 'Quebra-cabeça arquitetônico 3D', '216 peças, LED inclusso, display 45cm', DATE '2028-03-10', 14);
+INSERT INTO PRODUTO VALUES (416, 'Bola de Futebol Infantil Oficial', 79.90, DATE '2023-02-15', 'Bola tamanho infantil da FIFA', 'Circunferência 62cm, material PU, câmara butila', DATE '2027-02-15', 14);
+INSERT INTO PRODUTO VALUES (417, 'Kit Pintura por Numbers 40x50cm', 99.90, DATE '2023-01-20', 'Quadro para pintura numerada', 'Tela 40x50cm, tintas acrílicas, pincéis inclusos', DATE '2026-01-20', 14);
+INSERT INTO PRODUTO VALUES (418, 'Brinquedo Pelúcia Interativo FurReal', 299.90, DATE '2023-09-15', 'Bichinho de pelúcia eletrônico', 'Reage ao toque, movimentos realistas, sons', DATE '2027-09-15', 14);
+INSERT INTO PRODUTO VALUES (419, 'Jogo de Xadrez Magnético Viagem', 59.90, DATE '2023-08-25', 'Tabuleiro de xadrez portátil', 'Peças magnéticas, estojo compacto, 20x20cm', DATE '2028-08-25', 14);
+INSERT INTO PRODUTO VALUES (420, 'Kit Robótica Educacional Arduino', 499.90, DATE '2023-07-30', 'Kit iniciação à programação e robótica', 'Componentes eletrônicos, manual projetos, idade 12+', DATE '2028-07-30', 14);
 
 -- Clientes
 INSERT INTO CLIENTE VALUES (1, '12345678901', 'João', 'Silva', 'joao.silva@email.com', TO_DATE('1985-03-15', 'YYYY-MM-DD'), 150, 'Masculino', NULL, NULL, 'Rua das Flores', '123', 'Centro', 'São Paulo', 'SP', '01001-000');
@@ -517,3 +619,105 @@ INSERT INTO CLIENTE VALUES (159, '19657483920', 'Larissa', 'Souza', 'larissa.sou
 INSERT INTO CLIENTE VALUES (160, '20768594031', 'Felipe', 'Rodrigues', 'felipe.rodrigues@email.com', TO_DATE('1980-10-08', 'YYYY-MM-DD'), 55, 'Masculino', TO_DATE('2025-10-20', 'YYYY-MM-DD'), 157, 'Avenida Plínio Brasil Milano', '852', 'Higienópolis', 'Porto Alegre', 'RS', '90520-100');
 
 
+
+-- População da tabela HISTORICO_PROD_VISUALIZADO
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (1, DATE '2024-08-01', 120, 5, 1);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (2, DATE '2024-08-02', 90, 12, 1);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (3, DATE '2024-08-03', 150, 20, 2);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (4, DATE '2024-08-04', 60, 7, 2);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (5, DATE '2024-08-05', 200, 30, 3);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (6, DATE '2024-08-06', 75, 18, 3);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (7, DATE '2024-08-07', 95, 25, 4);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (8, DATE '2024-08-08', 110, 40, 4);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (9, DATE '2024-08-09', 135, 15, 5);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (10, DATE '2024-08-10', 80, 9, 5);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (11, DATE '2024-08-11', 140, 33, 6);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (12, DATE '2024-08-12', 95, 22, 6);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (13, DATE '2024-08-13', 160, 11, 7);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (14, DATE '2024-08-14', 85, 28, 7);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (15, DATE '2024-08-15', 175, 36, 8);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (16, DATE '2024-08-16', 100, 3, 8);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (17, DATE '2024-08-17', 200, 45, 9);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (18, DATE '2024-08-18', 70, 8, 9);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (19, DATE '2024-08-19', 120, 2, 10);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (20, DATE '2024-08-20', 150, 14, 10);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (21, DATE '2024-03-01', 180, 50, 11);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (22, DATE '2024-03-02', 90, 55, 11);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (23, DATE '2024-03-03', 110, 60, 12);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (24, DATE '2024-03-04', 95, 63, 12);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (25, DATE '2024-03-05', 130, 70, 13);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (26, DATE '2024-03-06', 80, 72, 13);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (27, DATE '2024-03-07', 160, 75, 14);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (28, DATE '2024-03-08', 90, 77, 14);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (29, DATE '2024-03-09', 200, 80, 15);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (30, DATE '2024-03-10', 150, 85, 15);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (31, DATE '2024-03-11', 100, 90, 16);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (32, DATE '2024-03-12', 140, 95, 16);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (33, DATE '2024-03-13', 75, 100, 17);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (34, DATE '2024-03-14', 85, 102, 17);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (35, DATE '2024-03-15', 160, 105, 18);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (36, DATE '2024-03-16', 200, 110, 18);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (37, DATE '2024-03-17', 110, 112, 19);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (38, DATE '2024-03-18', 95, 115, 19);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (39, DATE '2024-03-19', 120, 118, 20);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (40, DATE '2024-03-20', 180, 120, 20);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (41, DATE '2024-04-01', 130, 122, 1);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (42, DATE '2024-04-02', 90, 125, 2);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (43, DATE '2024-04-03', 110, 130, 3);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (44, DATE '2024-04-04', 140, 133, 4);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (45, DATE '2024-04-05', 200, 135, 5);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (46, DATE '2024-04-06', 150, 137, 6);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (47, DATE '2024-04-07', 160, 140, 7);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (48, DATE '2024-04-08', 70, 142, 8);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (49, DATE '2024-04-09', 120, 145, 9);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (50, DATE '2024-04-10', 135, 148, 10);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (51, DATE '2024-04-11', 200, 150, 11);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (52, DATE '2024-04-12', 75, 152, 12);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (53, DATE '2024-04-13', 85, 155, 13);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (54, DATE '2024-04-14', 95, 158, 14);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (55, DATE '2024-04-15', 140, 160, 15);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (56, DATE '2024-04-16', 180, 162, 16);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (57, DATE '2024-04-17', 200, 165, 17);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (58, DATE '2024-04-18', 110, 168, 18);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (59, DATE '2024-04-19', 90, 170, 19);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (60, DATE '2024-04-20', 150, 172, 20);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (61, DATE '2024-05-01', 180, 175, 1);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (62, DATE '2024-05-02', 70, 178, 2);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (63, DATE '2024-05-03', 95, 180, 3);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (64, DATE '2024-05-04', 100, 182, 4);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (65, DATE '2024-05-05', 200, 185, 5);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (66, DATE '2024-05-06', 150, 188, 6);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (67, DATE '2024-05-07', 135, 190, 7);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (68, DATE '2024-05-08', 110, 192, 8);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (69, DATE '2024-05-09', 140, 195, 9);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (70, DATE '2024-05-10', 175, 198, 10);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (71, DATE '2024-05-11', 160, 199, 11);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (72, DATE '2024-05-12', 75, 185, 12);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (73, DATE '2024-05-13', 200, 170, 13);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (74, DATE '2024-05-14', 110, 150, 14);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (75, DATE '2024-05-15', 135, 145, 15);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (76, DATE '2024-05-16', 90, 140, 16);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (77, DATE '2024-05-17', 85, 130, 17);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (78, DATE '2024-05-18', 95, 120, 18);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (79, DATE '2024-05-19', 140, 115, 19);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (80, DATE '2024-05-20', 200, 100, 20);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (81, DATE '2024-06-01', 120, 95, 1);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (82, DATE '2024-06-02', 180, 85, 2);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (83, DATE '2024-06-03', 200, 75, 3);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (84, DATE '2024-06-04', 95, 65, 4);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (85, DATE '2024-06-05', 135, 55, 5);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (86, DATE '2024-06-06', 160, 45, 6);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (87, DATE '2024-06-07', 150, 35, 7);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (88, DATE '2024-06-08', 70, 25, 8);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (89, DATE '2024-06-09', 110, 15, 9);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (90, DATE '2024-06-10', 90, 10, 10);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (91, DATE '2024-06-11', 175, 20, 11);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (92, DATE '2024-06-12', 200, 30, 12);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (93, DATE '2024-06-13', 100, 40, 13);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (94, DATE '2024-06-14', 85, 50, 14);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (95, DATE '2024-06-15', 95, 60, 15);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (96, DATE '2024-06-16', 140, 70, 16);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (97, DATE '2024-06-17', 180, 80, 17);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (98, DATE '2024-06-18', 150, 90, 18);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (99, DATE '2024-06-19', 120, 100, 19);
+INSERT INTO HISTORICO_PROD_VISUALIZADO VALUES (100, DATE '2024-06-20', 135, 110, 20);
