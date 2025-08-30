@@ -1,10 +1,12 @@
 --Projeto em Grupo - Fase 3
 
 --1 - Liste o nome dos clientes que possuem no histórico de visualização produtos com preço de venda superior a R$ 60,00.
-SELECT DISTINCT c.NOME, c.SOBRENOME
+SELECT DISTINCT c.NOME
     FROM CLIENTE c
-    JOIN HISTORICO_PROD_VISUALIZADO h ON c.CODIGO = h.CODIGO_CLIENTE
-    JOIN PRODUTO p ON h.CODIGO_PRODUTO = p.CODIGO
+        JOIN HISTORICO_PROD_VISUALIZADO h 
+            ON c.CODIGO = h.CODIGO_CLIENTE
+        JOIN PRODUTO p 
+            ON h.CODIGO_PRODUTO = p.CODIGO
     WHERE p.PRECO > 60.00;
 
 --2 - Qual(is) o(s) produto(s) mais bem avaliado(s) (com a maior média de avaliação) pelos clientes de sobrenome ‘Medeiros’? Projete o código e nome do(s) produto(s).
