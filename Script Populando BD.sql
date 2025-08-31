@@ -39,6 +39,7 @@ INSERT INTO CATEGORIA (CODIGO, NOME) VALUES (37, 'Câmeras e Fotografia');
 INSERT INTO CATEGORIA (CODIGO, NOME) VALUES (38, 'Tablets e Acessórios');
 INSERT INTO CATEGORIA (CODIGO, NOME) VALUES (39, 'Energia Solar e Sustentabilidade');
 INSERT INTO CATEGORIA (CODIGO, NOME) VALUES (40, 'Suplementos e Vitaminas');
+INSERT INTO CATEGORIA (CODIGO, NOME) VALUES (41, 'Hardware');
 
 -- Categoria 1: Eletrônicos
 INSERT INTO PRODUTO VALUES (1, 'Smartphone Galaxy S22', 3899.90, DATE '2023-03-10', 'Smartphone Android topo de linha', 'Tela 6.2", 128GB, 8GB RAM, Câmera 50MP', DATE '2027-03-10', 1);
@@ -834,6 +835,9 @@ INSERT INTO PRODUTO VALUES (772, 'Limpa Inox 200ml', 26.90, DATE '2023-08-30', '
 INSERT INTO PRODUTO VALUES (773, 'Detergente Enzimático 1L', 48.90, DATE '2023-07-25', 'Removedor de proteínas orgânicas', '1L, enzimas ativas, ideal para cozinhas, biodegradável', DATE '2025-07-25', 36);
 INSERT INTO PRODUTO VALUES (774, 'Limpa Pedras 1 Litro', 55.90, DATE '2023-06-20', 'Especial para mármore e granito', '1L, limpa e protege, não abrasivo, pH neutro', DATE '2025-06-20', 36);
 
+-- Categoria 41: Hardware
+INSERT INTO PRODUTO VALUES (775, 'Placa de video', 55.90, DATE '2023-06-20', 'placa', '1G, NVIDEA', DATE '2025-06-20', 41);
+
 -- Clientes
 INSERT INTO CLIENTE VALUES (1, '12345678901', 'João', 'Silva', 'joao.silva@email.com', TO_DATE('1985-03-15', 'YYYY-MM-DD'), 150, 'Masculino', NULL, NULL, 'Rua das Flores', '123', 'Centro', 'São Paulo', 'SP', '01001-000');
 INSERT INTO CLIENTE VALUES (2, '23456789012', 'Maria', 'Santos', 'maria.santos@email.com', TO_DATE('1990-07-22', 'YYYY-MM-DD'), 75, 'Feminino', TO_DATE('2023-01-15', 'YYYY-MM-DD'), 1, 'Avenida Paulista', '456', 'Bela Vista', 'São Paulo', 'SP', '01310-000');
@@ -1151,7 +1155,7 @@ INSERT INTO FORNECEDOR VALUES (47, 'Office Furniture', 'www.officefurniture.com.
 INSERT INTO FORNECEDOR VALUES (48, 'Pet Food Quality', 'www.petfoodquality.com.br', 'contato@petfoodquality.com.br', '(11) 4848-3333', 'Rua da Ração', '350', 'Pet Nutrition', 'São Paulo', 'SP', '04581-600', 'Brasil');
 INSERT INTO FORNECEDOR VALUES (49, 'Auto Care Products', 'www.autocareproducts.com.br', 'vendas@autocareproducts.com.br', '(11) 4949-4444', 'Av. do Automóvel', '500', 'Auto Care Center', 'São Paulo', 'SP', '04581-700', 'Brasil');
 INSERT INTO FORNECEDOR VALUES (50, 'Garden Tools Pro', 'www.gardentoolspro.com.br', 'contato@gardentoolspro.com.br', '(11) 5050-5555', 'Rua das Ferramentas de Jardim', '250', 'Garden Tools Center', 'São Paulo', 'SP', '04581-800', 'Brasil');
-
+INSERT INTO FORNECEDOR VALUES (51, 'Maximum Repair', 'www.MaximumRepair.com.br', 'contato@maximum.com.br', '(11) 5050-2585', 'Rua das Ferramentas de Jardim', '240', 'Garden Tools Center', 'São Paulo', 'SP', '04581-800', 'Brasil');
 
 
 -- Inserções na tabela TRANSPORTADORA (1-30)
@@ -1500,6 +1504,7 @@ INSERT INTO FORNECEDOR_FORNECE_PRODUTO (CODIGO_PRODUTO, CODIGO_FORNECEDOR) VALUE
 INSERT INTO FORNECEDOR_FORNECE_PRODUTO (CODIGO_PRODUTO, CODIGO_FORNECEDOR) VALUES (169, 9);
 INSERT INTO FORNECEDOR_FORNECE_PRODUTO (CODIGO_PRODUTO, CODIGO_FORNECEDOR) VALUES (170, 10);
 INSERT INTO FORNECEDOR_FORNECE_PRODUTO (CODIGO_PRODUTO, CODIGO_FORNECEDOR) VALUES (170, 16);
+INSERT INTO FORNECEDOR_FORNECE_PRODUTO (CODIGO_PRODUTO, CODIGO_FORNECEDOR) VALUES (775, 51);
 
 
 INSERT INTO PROD_ESTOCADO_CENT_DIST VALUES (1, 1, 40);
