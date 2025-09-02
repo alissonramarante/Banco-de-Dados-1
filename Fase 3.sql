@@ -14,7 +14,6 @@ SELECT DISTINCT c.NOME
 --4 - Exiba o nome e e-mail de todos os clientes que moram em Belém. Se o cliente já comprou o produto ‘Mesa de madeira’, exiba a quantidade comprada deste produto feita pelo cliente, se não comprou, exiba 0.
 SELECT 
     c.NOME, 
-    c.SOBRENOME, 
     c.EMAIL,
     NVL((
         SELECT SUM(cpp.QUANTIDADE)
