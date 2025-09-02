@@ -22,4 +22,19 @@ SELECT CIDADE, COUNT(*) as TOTAL_CLIENTES
     ORDER BY TOTAL_CLIENTES DESC;
 
 --9 - Exiba o nome do(s) fornecedor(es) que fornecem mais de 3 produtos diferentes.
+SELECT f.CODIGO, f.NOME
+FROM FORNECEDOR f
+JOIN FORNECEDOR_FORNECE_PRODUTO ffp 
+     ON f.CODIGO = ffp.CODIGO_FORNECEDOR
+GROUP BY f.CODIGO, f.NOME
+HAVING COUNT(DISTINCT ffp.CODIGO_PRODUTO) > 3;
+
 --10 - Projete o código da(s) compra(s) que contém pelo menos um produto da categoria ‘Livros’ e que tiveram um desconto maior que 20 reais.
+SELECT DISTINCT oc.CODIGO
+FROM ORDEM_DE_COMPRA oc
+JOIN COMPRA_POSSUI_PRODUTO cpp ON oc.CODIGO = cpp.CODIGO_COMPRA
+JOIN PRODUTO p ON cpp.CODIGO_PRODUTO = p.CODIGO
+JOIN CATEGORIA cat ON p.CODIGO_CATEGORIA = cat.CODIGO
+WHERE cat.NOME = 'Livros'
+  AND oc.DESCONTO > 20;
+
