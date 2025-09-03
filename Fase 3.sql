@@ -41,7 +41,45 @@ GROUP BY cat.NOME
 ORDER BY cat.NOME;
 
 --6 - Exiba o nome, sobrenome, e-mail e código dos clientes que possuem um valor médio de compra superior ou igual a R$250,00 e que não realizaram compras em 2025.
+SELECT 
+    C.NOME, 
+    C.SOBRENOME, 
+    C.EMAIL, 
+    C.CODIGO
+FROM 
+    CLIENTE C
+JOIN 
+    ORDEM_DE_COMPRA OC ON C.CODIGO = OC.CODIGO_CLIENTE
+JOIN 
+    COMPRA_POSSUI_PRODUTO CPP ON OC.CODIGO = CPP.CODIGO_COMPRA
+WHERE 
+    OC.DATA_COMPRA NOT LIKE '2025%'  -- Filtra pedidos fora de 2025
+GROUP BY 
+    C.CODIGO, C.NOME, C.SOBRENOME, C.EMAIL
+HAVING z
+    AVG(CPP.VALOR_ATUAL * CPP.QUANTIDADE) >= 250;  -- Média de compras superior a R$250
 --7 - Dentre os clientes que residem em Maceió e gastaram mais de R$5000,00 em compras entre Janeiro 2024 e Março 2025. Exiba o código, nome e valor total gasto em compras no período, ordenado pelo valor total gasto em ordem decrescente.
+SELECT 
+    C.CODIGO, 
+    C.NOME, 
+    SUM(CPP.VALOR_ATUAL * CPP.QUANTIDADE) AS VALOR_TOTAL_GASTO
+FROM 
+    CLIENTE C
+JOIN 
+    ORDEM_DE_COMPRA OC ON C.CODIGO = OC.CODIGO_CLIENTE
+JOIN 
+    COMPRA_POSSUI_PRODUTO CPP ON OC.CODIGO = CPP.CODIGO_COMPRA
+WHERE 
+    C.CIDADE = 'Maceió'
+AND 
+    OC.DATA_COMPRA BETWEEN TO_DATE('2024-01-01', 'YYYY-MM-DD') 
+    AND TO_DATE('2025-03-31', 'YYYY-MM-DD')
+GROUP BY 
+    C.CODIGO, C.NOME
+HAVING 
+    SUM(CPP.VALOR_ATUAL * CPP.QUANTIDADE) > 5000
+ORDER BY 
+    VALOR_TOTAL_GASTO DESC;
 --8 - Projeto o nome de cada cidade e o total de clientes que ela possui.
 SELECT CIDADE, COUNT(*) as TOTAL_CLIENTES
     FROM CLIENTE
