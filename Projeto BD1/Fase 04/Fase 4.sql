@@ -116,18 +116,34 @@ JOIN CLIENTE c
     ON e.CODIGO_CLIENTE = c.CODIGO
 WHERE e.DATA_ENVIO BETWEEN TO_DATE('01/01/2023', 'DD/MM/YYYY') AND TO_DATE('31/07/2024', 'DD/MM/YYYY');
 
+-- Teste procedure PL/SQL view que exibe emails recebidos
+
+-- Devemos popular com esse insert de e-mail
+
+INSERT INTO EMAIL (CODIGO, ASSUNTO, CONTEUDO, DATA_ENVIO, CODIGO_CLIENTE)
+VALUES (EMAIL_SEQ.NEXTVAL, 'Promoção', 'Desconto especial para você!', 
+        TO_DATE('20/03/2023', 'DD/MM/YYYY'), 1);
+
+-- Devemos Rodar
+
+SELECT * FROM vw_emails_clientes_periodo;
+
+
 -- 6 - Crie uma view que exibe, por cliente, todos os endereços distintos que ele possui em ordens de compras já finalizadas. A visão deve exibir o código e nome do cliente, além do código e do endereço da ordem de compra.
 CREATE OR REPLACE VIEW vw_enderecos_clientes_finalizados AS
 SELECT DISTINCT
     c.CODIGO        AS codigo_cliente,
     c.NOME          AS nome_cliente,
-    oc.CODIGO       AS codigo_compra,
     oc.RUA || ', ' || oc.NUMERO || ', ' || oc.BAIRRO || ', ' || 
     oc.CIDADE || ' - ' || oc.ESTADO || ', CEP: ' || oc.CEP AS endereco_compra
 FROM CLIENTE c
 JOIN ORDEM_DE_COMPRA oc 
     ON c.CODIGO = oc.CODIGO_CLIENTE
-WHERE oc.STATUS = 'FINALIZADA';
+WHERE oc.STATUS = 'FINALIZADA'
+
+-- Devemos Rodar
+
+SELECT * FROM vw_enderecos_clientes_finalizados;
 
 -- 7 - Crie uma view com o nome v_fornecedor_sem_produto que exibe o nome e código dos fornecedores que não possuem nenhum produto cadastrado no sistema.
 
