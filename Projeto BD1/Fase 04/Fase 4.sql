@@ -1,6 +1,8 @@
 --Projeto em Grupo - Fase 4
 
--- 1 - Implemente uma function PL/SQL chamada calcular_media_compras_cliente. Essa function deverá receber um código de cliente e retornar a média dos valores de suas compras já finalizadas. 
+-- 1 - Implemente uma function PL/SQL chamada calcular_media_compras_cliente. 
+--Essa function deverá receber um código de cliente e retornar a média dos valores de suas compras já finalizadas. 
+
 CREATE OR REPLACE FUNCTION calcular_media_compras_cliente (
     p_codigo_cliente IN CLIENTE.CODIGO%TYPE
 ) RETURN NUMBER IS
@@ -38,7 +40,11 @@ BEGIN
 END;
 
 
--- 2 - Implemente uma procedure PL/SQL chamada calcular_pontos. Esta procedure recebe o código do cliente e atualiza o total de pontos do mesmo. Para isso, é calculada a quantidade total de compras que o cliente fez. Esse valor é multiplicado por 10. Em seguida, o valor de pontos do cliente é atualizado.
+-- 2 - Implemente uma procedure PL/SQL chamada calcular_pontos. 
+--Esta procedure recebe o código do cliente e atualiza o total de pontos do mesmo. 
+--Para isso, é calculada a quantidade total de compras que o cliente fez. 
+--Esse valor é multiplicado por 10. Em seguida, o valor de pontos do cliente é atualizado.
+
 CREATE OR REPLACE PROCEDURE calcular_pontos (
     p_codigo_cliente IN CLIENTE.CODIGO%TYPE
 ) IS
@@ -67,7 +73,10 @@ END;
 
 SELECT CODIGO, NOME, PONTOS FROM CLIENTE WHERE CODIGO = 19;
 
--- 3 - Implemente uma procedure PL/SQL chamada remover_historico_cliente. Essa procedure recebe o código de um cliente e deverá remover o histórico de produtos visualizados há mais de 1 ano.
+-- 3 - Implemente uma procedure PL/SQL chamada remover_historico_cliente. 
+--Essa procedure recebe o código de um cliente e deverá remover o histórico 
+--de produtos visualizados há mais de 1 ano.
+
 CREATE OR REPLACE PROCEDURE remover_historico_cliente (
     p_codigo_cliente IN CLIENTE.CODIGO%TYPE
 ) IS
@@ -89,7 +98,11 @@ END;
 
 SELECT * FROM HISTORICO_PROD_VISUALIZADO WHERE CODIGO_CLIENTE = 20;
 
--- 4 - Implemente uma procedure PL/SQL chamada atualizar_data_validade. Esta procedure recebe o código de uma categoria e uma quantidade em dias, e atualiza o valor da data de vencimento de todos os produtos da categoria passada para que seja igual a sua data de fabricação mais a quantidade de dias passados como parâmetro.
+-- 4 - Implemente uma procedure PL/SQL chamada atualizar_data_validade. 
+--Esta procedure recebe o código de uma categoria e uma quantidade em dias, 
+--e atualiza o valor da data de vencimento de todos os produtos da categoria 
+--passada para que seja igual a sua data de fabricação mais a quantidade de dias passados como parâmetro.
+
 CREATE OR REPLACE PROCEDURE atualizar_data_validade (
     p_codigo_categoria IN CATEGORIA.CODIGO%TYPE,
     p_qtd_dias         IN NUMBER
@@ -104,7 +117,8 @@ EXCEPTION
         RAISE;
 END;
 
--- 5 - Crie uma view que exibe todos os emails já recebidos por cada cliente que estão no período entre 01/01/2023 e 31/07/2024 . A visão deve exibir o assunto e o conteúdo do email, assim como o nome do Cliente que o recebeu.
+-- 5 - Crie uma view que exibe todos os emails já recebidos por cada cliente que estão no período entre 01/01/2023 e 31/07/2024. 
+-- A visão deve exibir o assunto e o conteúdo do email, assim como o nome do Cliente que o recebeu.
 CREATE OR REPLACE VIEW vw_emails_clientes_periodo AS
 SELECT 
     c.NOME AS nome_cliente,
@@ -129,7 +143,9 @@ VALUES (EMAIL_SEQ.NEXTVAL, 'Promoção', 'Desconto especial para você!',
 SELECT * FROM vw_emails_clientes_periodo;
 
 
--- 6 - Crie uma view que exibe, por cliente, todos os endereços distintos que ele possui em ordens de compras já finalizadas. A visão deve exibir o código e nome do cliente, além do código e do endereço da ordem de compra.
+-- 6 - Crie uma view que exibe, por cliente, todos os endereços distintos que ele possui em 
+--ordens de compras já finalizadas. A visão deve exibir o código e nome do cliente, além do código e do endereço da ordem de compra.
+
 CREATE OR REPLACE VIEW vw_enderecos_clientes_finalizados AS
 SELECT DISTINCT
     c.CODIGO        AS codigo_cliente,
@@ -145,7 +161,8 @@ WHERE oc.STATUS = 'FINALIZADA'
 
 SELECT * FROM vw_enderecos_clientes_finalizados;
 
--- 7 - Crie uma view com o nome v_fornecedor_sem_produto que exibe o nome e código dos fornecedores que não possuem nenhum produto cadastrado no sistema.
+-- 7 - Crie uma view com o nome v_fornecedor_sem_produto que exibe o nome e código dos 
+--fornecedores que não possuem nenhum produto cadastrado no sistema.
 
 CREATE OR REPLACE VIEW v_fornecedor_sem_produto AS
 SELECT f.CODIGO, f.NOME
@@ -156,7 +173,9 @@ WHERE NOT EXISTS (
     WHERE ff.CODIGO_FORNECEDOR = f.CODIGO
 );
 
--- 8 - Crie um trigger com o nome tg_verificar_preco_produto para garantir que, ao atualizar o preço de um produto, o novo preço seja pelo menos o dobro do preço anterior. Caso contrário, lance uma exceção.
+-- 8 - Crie um trigger com o nome tg_verificar_preco_produto para garantir que, ao 
+--atualizar o preço de um produto, o novo preço seja pelo menos o dobro do preço anterior. Caso contrário, lance uma exceção.
+
 CREATE OR REPLACE TRIGGER tg_verificar_preco_produto
 BEFORE UPDATE OF PRECO ON PRODUTO
 FOR EACH ROW
@@ -167,7 +186,9 @@ BEGIN
 END;
 
 
--- 9 - Crie um trigger para inserir DESCRICAO = ‘Produto sem descrição’ quando uma tupla for inserida com descrição de produto nula.
+-- 9 - Crie um trigger para inserir DESCRICAO = ‘Produto sem descrição’ 
+--quando uma tupla for inserida com descrição de produto nula.
+
 CREATE OR REPLACE TRIGGER tg_inserir_descricao_padrao
 BEFORE INSERT ON PRODUTO
 FOR EACH ROW
@@ -177,7 +198,8 @@ BEGIN
     END IF;
 END;
 
--- 10 - Crie um trigger para modificar o nome do cliente deixando a primeira letra no nome sempre maiúscula quando esse dado for inserido ou atualizado.
+-- 10 - Crie um trigger para modificar o nome do cliente deixando a primeira letra no nome 
+--sempre maiúscula quando esse dado for inserido ou atualizado.
 
 CREATE OR REPLACE TRIGGER tg_formatar_nome_cliente
 BEFORE INSERT OR UPDATE OF NOME ON CLIENTE
@@ -187,4 +209,3 @@ BEGIN
         :NEW.NOME := INITCAP(:NEW.NOME);
         END IF;
 END;
-/
