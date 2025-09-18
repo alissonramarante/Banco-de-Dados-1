@@ -183,6 +183,7 @@ CREATE OR REPLACE VIEW vw_enderecos_clientes_finalizados AS
 SELECT DISTINCT
     c.CODIGO AS codigo_cliente,
     c.NOME AS nome_cliente,
+    oc.CODIGO AS codigo_compra,
     oc.RUA || ', ' || oc.NUMERO || ', ' || oc.BAIRRO || ', ' ||
     oc.CIDADE || ' - ' || oc.ESTADO || ', CEP: ' || oc.CEP AS endereco_compra
 FROM CLIENTE c
